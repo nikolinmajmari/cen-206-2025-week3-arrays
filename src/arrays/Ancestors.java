@@ -36,8 +36,7 @@ public class Ancestors {
                 {"Eve","Annie"},
                 {"Annie","Frank"},
         };
-
         ArrayList<String> ancestors = (ArrayList<String>) findAncestors(inheretance,"Dave");
-        System.out.println(ancestors);
+        System.out.println(ancestors); /// [Alice, Armin, Carol]
     }
 }

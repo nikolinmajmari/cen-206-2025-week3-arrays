@@ -1,7 +1,6 @@
-package arrays.record.depricated;
+package arrays.record;
 
 import arrays.Joins;
-import arrays.record.Recordset;
 import arrays.record.filterCondition.FilterCondition;
 import arrays.record.filterCondition.FilterEquals;
 import arrays.record.filterCondition.FilterGreaterThan;

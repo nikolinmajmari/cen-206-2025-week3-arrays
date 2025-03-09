@@ -5,15 +5,16 @@ import java.util.Map;
 
 public class Histogram {
 
-    Map<Integer,Integer> getHistogram(int[] array){
+    static Map<Integer,Integer> getHistogram(int[] array){
        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
-       for(int i=0;i<array.length;i++){
-           map.put(array[i],map.getOrDefault(array[i],0)+1);
-       }
+        for (int j : array) {
+            map.put(j, map.getOrDefault(j, 0) + 1);
+        }
        return map;
     }
 
     public static void main(String[] args) {
-
+        System.out.println(getHistogram(new int[]{1,1,2,4,3,1,2,5,6,4,2,3,1}));
+        /// {1=4, 2=3, 3=2, 4=2, 5=1, 6=1}
     }
 }
