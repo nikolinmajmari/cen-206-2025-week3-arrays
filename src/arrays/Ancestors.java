@@ -7,21 +7,15 @@ public class Ancestors {
 
 
     public static List<String> findAncestors(String [][] array,String person){
-        if(array.length==0){
-            return new ArrayList<>();
-        }
-        List<String> parents = new ArrayList<String>();
-        for(int i=0;i<array.length;i++){
-            if(array[i][1].equals(person)){
-                parents.add(array[i][0]);
-            }
-        }
         List<String> ancestors = new ArrayList<>();
-        for(String parent:parents){
-            ancestors.addAll(findAncestors(array,parent));
-        }
-        ancestors.addAll(parents);
+        // todo your code here
         return ancestors;
+    }
+
+    public static List<String> findDescendants(String [][] array, String person){
+        List<String> descendants = new ArrayList<>();
+        // todo your code here
+        return descendants;
     }
 
 

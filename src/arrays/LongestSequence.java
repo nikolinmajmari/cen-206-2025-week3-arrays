@@ -3,23 +3,8 @@ package arrays;
 public class LongestSequence {
 
     public static int findLongestSequence(int[] array) {
-        int longestSequence = 0;
-        int currrentSequence = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            currrentSequence = 1;
-            for (int j = i+1; j < array.length; j++) {
-                if (array[i] == array[j]) {
-                    currrentSequence++;
-                }else {
-                    break;
-                }
-            }
-            if (currrentSequence > longestSequence) {
-                longestSequence = currrentSequence;
-            }
-        }
-        return longestSequence;
+        // todo your code here
+        return 0;
     }
 
 

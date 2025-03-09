@@ -6,24 +6,13 @@ import java.util.Arrays;
 public class Joins {
 
     public static Object[] mergeArrays(Object[] left, Object[] right) {
-        Object[] newObject = new Object[left.length+right.length];
-        System.arraycopy(left, 0, newObject, 0, left.length);
-        System.arraycopy(right, 0, newObject, left.length, right.length);
-        return newObject;
+        // todo your code here
+        return new Object[]{};
     }
 
     public static ArrayList<Object[]> joinOnEqual(Object[][]left,Object[][]right,int leftIndex,int rightIndex) {
         ArrayList<Object[]> joined = new ArrayList<>();
-        for (int i = 0; i < left.length; i++) {
-            for (int j = 0; j < right.length; j++) {
-                Object[] leftRow = left[i];
-                Object[] rightRow = right[j];
-                if (leftRow[leftIndex].equals(rightRow[rightIndex])) {
-                    Object[] joinedRow = mergeArrays(left,right);
-                    joined.add(joinedRow);
-                }
-            }
-        }
+        // todo your code here
         return joined;
     }
 

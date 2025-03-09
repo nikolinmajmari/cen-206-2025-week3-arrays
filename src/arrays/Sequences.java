@@ -2,74 +2,18 @@ package arrays;
 
 public class Sequences {
     public static int countIncreasingSequences(int[] array){
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            boolean isIncreasing = false;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] < array[j]) {
-                    isIncreasing = true;
-                }else {
-                    i = j;
-                    break;
-                }
-            }
-            if (isIncreasing) {
-                count++;
-            }
-        }
-        return count;
+        // todo your code here
+        return 0;
     }
 
     public static int countDecreasingSequences(int[] array){
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            boolean isIncreasing = false;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[i] > array[j]) {
-                    isIncreasing = true;
-                }else {
-                    i = j;
-                    break;
-                }
-            }
-            if (isIncreasing) {
-                count++;
-            }
-        }
-        return count;
+        // todo your code here
+        return 0;
     }
 
     public static int countSequenceEdges(int[] array){
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            boolean isEdgeOnLeft = true;
-            for (int j = i-1; j >=0; j--) {
-                if(array[i] < array[j]){
-                    isEdgeOnLeft = false;
-                    break;
-                } else if (array[i]>array[j]) {
-                    break;
-                }
-            }
-
-            boolean isEdgeOnRight = false;
-            for (int j = i+1; j < array.length; j++) {
-                if(array[i] < array[j] || array[j]>array[j-1]){
-                    i = j;
-                    if(i == array.length-1){
-                        count++;
-                    }
-                    break;
-                }else {
-                    isEdgeOnRight = true;
-                }
-            }
-
-            if(isEdgeOnLeft && (isEdgeOnRight )){
-                count++;
-            }
-        }
-        return count;
+        // todo your code here
+        return 0;
     }
 
     public static void main(String[] args) {

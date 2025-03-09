@@ -7,9 +7,7 @@ public class Histogram {
 
     static Map<Integer,Integer> getHistogram(int[] array){
        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
-        for (int j : array) {
-            map.put(j, map.getOrDefault(j, 0) + 1);
-        }
+       // todo your code here
        return map;
     }
 

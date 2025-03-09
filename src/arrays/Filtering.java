@@ -8,18 +8,7 @@ public class Filtering {
 
     public static ArrayList<Object[]> where(Object[][]records, Map<Integer,Integer> conditions) {
         ArrayList<Object[]> filtered = new ArrayList<>();
-        for (Object[] record : records) {
-            boolean filter = true;
-            for (Map.Entry<Integer,Integer> entry: conditions.entrySet()){
-                if(!record[entry.getKey()].equals(entry.getValue())){
-                    filter = false;
-                    break;
-                }
-            }
-            if(filter){
-                filtered.add(record);
-            }
-        }
+        // todo your code here
         return filtered;
     }
 
