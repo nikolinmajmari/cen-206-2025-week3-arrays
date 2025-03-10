@@ -12,7 +12,35 @@ public class Permutations {
 
     public static List<int[]> findPermutations(int[] array){
         ArrayList<int[]> permutations = new ArrayList<>();
-        // todo your code here
+        if(array.length == 1){
+            permutations.add(new int[]{array[0]});
+
+            return permutations;
+        }
+        for(int i = 0; i < array.length; i++){
+            int[] newArray = new int[array.length-1];
+
+            if(i==0){
+                System.arraycopy(array,1,newArray,0,array.length-1);
+            }
+            else if(i==array.length-1){
+                System.arraycopy(array,0,newArray,0,array.length-1);
+            }
+            else{
+                System.arraycopy(array,0,newArray,0,i);
+                System.arraycopy(array,i+1,newArray,i,array.length-i-1);
+            }
+            List<int[]> newPermutations = findPermutations(newArray);
+
+            for(int[] permutation : newPermutations){
+                int[] newArray2 = new int[permutation.length+1];
+                System.arraycopy(permutation,0,newArray2,1,permutation.length);
+                newArray2[0]=array[i];
+                permutations.add(newArray2);
+            }
+
+        }
+
         return permutations;
     }
 
