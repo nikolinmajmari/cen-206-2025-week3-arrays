@@ -7,12 +7,22 @@ public class Joins {
 
     public static Object[] mergeArrays(Object[] left, Object[] right) {
         // todo your code here
-        return new Object[]{};
+        Object[] result = new Object[left.length + right.length];
+        System.arraycopy(left, 0, result, 0, left.length);
+        System.arraycopy(right, 0, result, left.length, right.length);
+        return result;
     }
 
     public static ArrayList<Object[]> joinOnEqual(Object[][]left,Object[][]right,int leftIndex,int rightIndex) {
         ArrayList<Object[]> joined = new ArrayList<>();
         // todo your code here
+        for(Object[] leftRow : left) {
+            for(Object[] rightRow : right) {
+                 if(leftRow[leftIndex].equals(rightRow[rightIndex])){
+                     joined.add(mergeArrays(leftRow,rightRow));
+                 }
+            }
+        }
         return joined;
     }
 

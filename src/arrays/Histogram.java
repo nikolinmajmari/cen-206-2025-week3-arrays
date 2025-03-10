@@ -7,7 +7,13 @@ public class Histogram {
 
     static Map<Integer,Integer> getHistogram(int[] array){
        Map<Integer,Integer> map = new HashMap<Integer,Integer>();
-       // todo your code here
+       for(int item: array){
+          if(!map.containsKey(item)){
+              map.put(item,1);
+          }else {
+              map.put(item,map.get(item)+1);
+          }
+       }
        return map;
     }
 
