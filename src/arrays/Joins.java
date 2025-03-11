@@ -12,7 +12,21 @@ public class Joins {
 
     public static ArrayList<Object[]> joinOnEqual(Object[][]left,Object[][]right,int leftIndex,int rightIndex) {
         ArrayList<Object[]> joined = new ArrayList<>();
-        // todo your code here
+
+        for(Object[]  leftRow : left ) {
+
+            for(Object[] rightRow : right) {
+                if(leftRow[leftIndex].equals(rightRow[rightIndex])) {
+                    Object [] array = new Object[leftRow.length + rightRow.length];
+                    System.arraycopy(leftRow, 0, array, 0, leftRow.length);
+                    System.arraycopy(rightRow, 0, array, leftRow.length, rightRow.length);
+                    joined.add(array);
+                }
+            }
+        }
+
+
+
         return joined;
     }
 

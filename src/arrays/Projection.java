@@ -7,7 +7,12 @@ public class Projection {
 
     public static ArrayList<Object[]> select(Object[][] records,int[] indexes){
         ArrayList<Object[]> result = new ArrayList<>();
-        // todo your code here
+        for(Object[] record : records){
+            int[] array = new int[indexes.length];
+            for(int i = 0; i < indexes.length; i++){
+                array[i] = (int) record[indexes[i]];
+            }
+        }
         return result;
     }
 
