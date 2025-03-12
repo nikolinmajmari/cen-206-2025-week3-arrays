@@ -8,6 +8,14 @@ public class Projection {
     public static ArrayList<Object[]> select(Object[][] records,int[] indexes){
         ArrayList<Object[]> result = new ArrayList<>();
         // todo your code here
+        for(Object[] record : records){
+            Object[] newRecord = new Object[indexes.length];
+            for(int i=0;i<indexes.length;i++){
+                int index=indexes[i];
+                newRecord[i]=record[indexes[i]];
+            }
+            result.add(newRecord);
+        }
         return result;
     }
 

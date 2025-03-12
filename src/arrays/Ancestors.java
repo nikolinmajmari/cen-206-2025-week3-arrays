@@ -8,8 +8,13 @@ public class Ancestors {
 
     public static List<String> findAncestors(String [][] array,String person){
         List<String> ancestors = new ArrayList<>();
-        // todo your code here
-        return ancestors;
+        for(String[] row:array){
+            if(row[1].equals(person)){
+                ancestors.add(row[0]);
+                ancestors.addAll( findAncestors(array,row[0]));
+            }
+        }
+        return ancestors ;
     }
 
     public static List<String> findDescendants(String [][] array, String person){

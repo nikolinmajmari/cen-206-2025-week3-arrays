@@ -9,6 +9,21 @@ public class Filtering {
     public static ArrayList<Object[]> where(Object[][]records, Map<Integer,Integer> conditions) {
         ArrayList<Object[]> filtered = new ArrayList<>();
         // todo your code here
+        for(Object[] record: records)
+        {
+            boolean valid = true;
+            for(Map.Entry<Integer,Integer> condition: conditions.entrySet())
+            {
+                if(!record[condition.getKey()].equals(condition.getValue())){
+                    valid = false;
+                    break;
+                }
+            }
+            if(valid)
+            {
+                filtered.add(record);
+            }
+        }
         return filtered;
     }
 
